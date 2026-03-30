@@ -86,4 +86,8 @@ This is the place for you to write reflections:
 
 #### Reflection Subscriber-1
 
+1. RwLock is needed because notifications can be read many times and only occasionally written. In this case, multiple reads should be allowed at the same time, so RwLock is more suitable than Mutex. Mutex would lock everything even for simple reads.
+
+2. Rust does not allow this directly because it enforces memory safety and prevents unsafe shared mutable state. Unlike Java, Rust requires synchronization for shared static data, so mutation must be done in a safe and explicit way.
+
 #### Reflection Subscriber-2
