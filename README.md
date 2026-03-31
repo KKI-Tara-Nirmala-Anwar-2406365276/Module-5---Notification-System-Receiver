@@ -91,3 +91,9 @@ This is the place for you to write reflections:
 2. Rust does not allow this directly because it enforces memory safety and prevents unsafe shared mutable state. Unlike Java, Rust requires synchronization for shared static data, so mutation must be done in a safe and explicit way.
 
 #### Reflection Subscriber-2
+
+1. I did not explore much outside the tutorial steps because I focused on completing the required implementation first. The provided structure was already clear enough to understand the flow.
+
+2. Observer pattern makes it easy to add more subscribers because the publisher only needs to notify all registered subscribers without knowing their details. Adding more receiver instances is simple since they just subscribe independently. However, adding multiple main apps would be more complex because synchronization between publishers is not handled.
+
+3. I tried using Postman to test the endpoints. It helps a lot because I can easily send requests and see responses without writing extra code. The feature I found useful is sending JSON requests and quickly checking responses, which is helpful for debugging APIs.
